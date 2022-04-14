@@ -19,3 +19,9 @@
 	<button type="button" id="signInBtn" class="btn w-100 mb-3">로그인</button>
 	<button type="button" id="signUpViewBtn" class="btn w-100">회원가입</button>
 </div>
+
+<script>
+$(document).ready(function() {
+	
+});
+</script>

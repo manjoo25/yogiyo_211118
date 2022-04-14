@@ -148,7 +148,24 @@ $(document).ready(function() {
 		let url = $('#signUpForm').attr("action");
 		let params = $('#signUpForm').serialize();
 		
-		$.post (url, data)
+		/* $.ajax({
+			type: "POST",
+			url: url,
+			data: params,
+			
+			success: function(data) {
+				if (data.result == "success") {
+					alert("가입을 환영합니다");				
+					location.href="/user/sign_in_view";
+				} else {
+					alert("가입을 실패하였습니다 다시 시도해주세요.");
+				},
+			error: function(error) {
+				alert("회원가입에 실패하였습니다")
+			}
+		}); */
+		
+		$.post (url, params)
 		.done(function(data) {
 			if (data.result == "success") {
 				alert("가입을 환영합니다");				
@@ -156,7 +173,7 @@ $(document).ready(function() {
 			} else {
 				alert("가입을 실패하였습니다 다시 시도해주세요.");
 			}
-		}); 
+		});
 	});
 });
 </script>
