@@ -4,21 +4,14 @@
 <mapper namespace="com.yogiyo.user.dao.UserDAO">
 	<select id="selectExistLoginId" parameterType="string" resultType="int">
 		SELECT
-			`id`
-			,`name`
-			,`loginId`
-			,`password`
-			,`email`
-			,`phoneNumber`
-			,`createdAt`
-			,`updatedAt`
+			COUNT(1)
 		FROM
 			`user`
 		WHERE
 			`loginId` = #{loginId}
 	</select>
 	
-<!-- 	<insert id="insertUser" parameterType="map">
+	<insert id="insertUser" parameterType="map">
 		INSERT INTO `user`
 		(
 			`name`
@@ -39,5 +32,5 @@
 			,NOW()
 			,NOW()
 		)
-	</insert> -->
+	</insert>
 </mapper>

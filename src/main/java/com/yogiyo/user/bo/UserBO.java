@@ -1,12 +1,9 @@
 package com.yogiyo.user.bo;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yogiyo.user.dao.UserDAO;
-import com.yogiyo.user.model.User;
 
 @Service
 public class UserBO {
@@ -20,8 +17,8 @@ public class UserBO {
 	}
 	
 	// insert
-//	public List<User> addUser(String name, String loginId,
-//			String password, String email, String phoneNumber) {
-//		return userDAO.insertUser(name, loginId, password, email, phoneNumber);
-//	}
+	public int addUser(String name, String loginId,
+			String password, String email, String phoneNumber) {
+		return userDAO.insertUser(name, loginId, password, email, phoneNumber);
+	}
 }
