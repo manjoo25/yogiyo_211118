@@ -22,10 +22,10 @@ header {
 }
 
 header > div {
-    width: 1020px;
+    width: 1000px;
 }
 
-.signInViewBtn, .signUpViewBtn {
+.signInViewBtn, .signUpViewBtn, .signOutViewBtn {
     background-color: #fa0050;
     border: 1px solid #ea7266;
     color: #fff;
@@ -53,12 +53,9 @@ section {
     border-radius: 5px;
 }
 
-.mainImg {
-    vertical-align: middle;
-}
-
 .box {
     position:relative;
+    border: #888 solid 1px;
 }
 
 .boxEx {
@@ -67,11 +64,12 @@ section {
     position: absolute;
     top: 0%;
     left: 0%;
+    font-weight: bold;
 }
 
 /* signUp */
-.signUp, .signIn {
-    width: 700px;
+.signUp, .signIn, .signOut {
+    width: 800px;
 }
 
 #loginIdCheckBtn {
@@ -83,9 +81,85 @@ section {
     border: none;
     color: #fff;
     font-size: 18px;
+    border-radius: 0%;
+}
+
+/* signIn */
+#signInBtn {
+    background-color: #fa0050;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 0%;
+}
+
+#signUpViewBtn {
+    border: none;
+    border-radius: 0%;
+    color: #000;
+    background-color: rgb(231, 231, 231);
+    font-size: 18px;
+}
+
+/* signOut */
+#signOutBtn {
+    background-color: #fa0050;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 0%;
+}
+
+.userInfo {
+    height: 200px;
+}
+
+.userEmail {
+    color: #ff8a00;
+}
+
+/* menu category */
+.category > ul > li > a {
+    color: #333;
+    width: 130px;
+    height: 55px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.category > ul > li > a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.category > ul > li > a:active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* rest list */
+.restInfo {
+    width: 480px;
+    border: #888 solid 1px;
+}
+
+.restImg {
+    width: 100px;
+}
+
+.restDetail {
+    width: 380px;
+}
+
+.reviewPoint {
+    color: #ffa800;
 }
 
 /* footer */
+footer > div {
+    height: 100px;
+}
+
 /* .footerMenu {
     border: 1px solid #ccc;
     border-style: solid none;
@@ -114,24 +188,3 @@ section {
     color: #818181;
     font-size: small;
 } */
-
-footer > div {
-    height: 100px;
-}
-
-/* signIn */
-#signInBtn {
-    background-color: #fa0050;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 0%;
-}
-
-#signUpViewBtn {
-    border: none;
-    border-radius: 0%;
-    color: #000;
-    background-color: rgb(231, 231, 231);
-    font-size: 18px;
-}

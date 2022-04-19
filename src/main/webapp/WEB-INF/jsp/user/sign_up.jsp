@@ -168,7 +168,7 @@ $(document).ready(function() {
 		$.post (url, params)
 		.done(function(data) {
 			if (data.result == "success") {
-				alert("가입을 환영합니다");				
+				alert("가입을 환영합니다");
 				location.href="/user/sign_in_view";
 			} else {
 				alert("가입을 실패하였습니다 다시 시도해주세요.");

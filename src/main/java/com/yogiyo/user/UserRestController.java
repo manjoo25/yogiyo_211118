@@ -4,6 +4,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.yogiyo.common.SHA256;
 import com.yogiyo.user.bo.UserBO;
+import com.yogiyo.user.model.User;
 
 @RequestMapping("/user")
 @RestController
@@ -80,6 +84,40 @@ public class UserRestController {
 			result.put("result", "error");
 		}
 		
+		return result;
+	}
+	
+	/**
+	 * 로그인
+	 * @param loginId
+	 * @param password
+	 * @param request
+	 * @return
+	 * @throws NoSuchAlgorithmException 
+	 */
+	@RequestMapping("/sign_in")
+	public Map<String, Object> signIn(
+			@RequestParam("loginId") String loginId,
+			@RequestParam("password") String password,
+			HttpServletRequest request) throws NoSuchAlgorithmException {
+		
+		SHA256 sha256 = new SHA256();
+
+        String cryptogram = sha256.encrypt(password);
+		User user = userBO.getUser(loginId, cryptogram);
+		
+		Map<String, Object> result = new HashMap<>();
+		if (user != null) {
+			// 로그인 - 세션에 저장
+			HttpSession session = request.getSession();
+			session.setAttribute("userLoginId", user.getLoginId());
+			session.setAttribute("userEmail", user.getEmail());	
+			session.setAttribute("userId", user.getId());	
+
+			result.put("result", "success");
+		} else {
+			result.put("error", "입력 실패");
+		}
 		return result;
 	}
 }
