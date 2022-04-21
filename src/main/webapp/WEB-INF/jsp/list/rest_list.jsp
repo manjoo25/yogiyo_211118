@@ -28,7 +28,7 @@
     </select>
 </div>
 <div class="d-flex flex-wrap justify-content-start ml-1">
-<c:forEach items="${storeList}" var="store" varStatus="status">
+<c:forEach items="${restList}" var="store" varStatus="status">
     <div class="restInfo d-flex m-2">
         <div class="restImg">
             <img src="${store.imagePath}" class="m-2" alt="음식점 로고" width="70">

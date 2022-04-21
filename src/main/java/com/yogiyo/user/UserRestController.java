@@ -95,7 +95,7 @@ public class UserRestController {
 	 * @return
 	 * @throws NoSuchAlgorithmException 
 	 */
-	@RequestMapping("/sign_in")
+	@PostMapping("/sign_in")
 	public Map<String, Object> signIn(
 			@RequestParam("loginId") String loginId,
 			@RequestParam("password") String password,
@@ -108,13 +108,13 @@ public class UserRestController {
 		
 		Map<String, Object> result = new HashMap<>();
 		if (user != null) {
+			result.put("result", "success");
+			
 			// 로그인 - 세션에 저장
 			HttpSession session = request.getSession();
 			session.setAttribute("userLoginId", user.getLoginId());
 			session.setAttribute("userEmail", user.getEmail());	
-			session.setAttribute("userId", user.getId());	
-
-			result.put("result", "success");
+			session.setAttribute("userId", user.getId());
 		} else {
 			result.put("error", "입력 실패");
 		}

@@ -26,7 +26,7 @@ public class RestController {
 	@RequestMapping("/rest_list_view")
 	public String restListView(Model model) {
 		// db select
-		List<Store> storeList = storeBO.getStoreList();
+		List<Store> restList = storeBO.getStoreList();
 		model.addAttribute("viewName", "/list/rest_list");
 		
 		return "template/layout";
