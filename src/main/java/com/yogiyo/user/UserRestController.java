@@ -103,7 +103,7 @@ public class UserRestController {
 		
 		SHA256 sha256 = new SHA256();
 
-        String cryptogram = sha256.encrypt(password);
+		String cryptogram = sha256.encrypt(password);
 		User user = userBO.getUser(loginId, cryptogram);
 		
 		Map<String, Object> result = new HashMap<>();

@@ -49,17 +49,19 @@ $(document).ready(function() {
 		let params = $('#loginForm').serialize();
 		
 		$.ajax({
+			type: "POST",
 			url: "/user/sign_in",
 			data: params,
 			success: function(data) {
 				if (data.result == "success") {
 					alert("로그인을 성공하였습니다");
-					location.href="/list/list_all"; 
+					location.href="/list/rest_list"; 
 				} else {
 					alert("로그인에 실패했습니다. 다시 시도해주세요.");
-				},
+				}
+			},
 			error: function(error) {
-				alert("로그인을 실패하였습니다. 관리자에게 문의해주세요.");
+				alert("로그인을 실패했습니다. 관리자에게 문의해주세요.");
 			}
 		});
 		

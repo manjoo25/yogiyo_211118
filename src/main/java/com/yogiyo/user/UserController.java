@@ -46,7 +46,9 @@ public class UserController {
 	 */
 	// 요청 URL : http://localhost/user/sign_out_view
 	@RequestMapping("/sign_out_view")
-	public String signOutView(Model model) {
+	public String signOutView(Model model
+			
+			) {
 		model.addAttribute("viewName", "/user/sign_out");
 		
 		return "template/layout";
