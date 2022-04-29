@@ -1,4 +1,4 @@
-package com.yogiyo.rest;
+package com.yogiyo.store;
 
 import java.util.List;
 
@@ -7,15 +7,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.yogiyo.rest.bo.StoreBO;
-import com.yogiyo.rest.model.Store;
+import com.yogiyo.store.bo.StoreBO;
+import com.yogiyo.store.model.Store;
 
 @RequestMapping("/list")
 @Controller
-public class RestController {
+public class StoreController {
 	
 	@Autowired
 	private StoreBO storeBO;
+	
+	// 요청 URL : http://localhost/list/list_all_view
+	@RequestMapping("/list_all_view")
+	public String listAllView(Model model) {
+		model.addAttribute("viewName", "/list/list_all");
+		
+		return "/template/layout";
+	}
 
 	/**
 	 * 음식점 리스트
@@ -27,6 +35,8 @@ public class RestController {
 	public String restListView(Model model) {
 		// db select
 		List<Store> restList = storeBO.getStoreList();
+		model.addAttribute("restList", restList);
+		
 		model.addAttribute("viewName", "/list/rest_list");
 		
 		return "template/layout";

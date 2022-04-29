@@ -2,6 +2,10 @@
     margin: auto;
 }
 
+hr {
+    margin: 0%;
+}
+
 a {
     text-decoration: none;
 }
@@ -55,7 +59,7 @@ section {
 
 .box {
     position:relative;
-    border: #888 solid 1px;
+    border: #e6e6e6 solid 1px;
 }
 
 .boxEx {
@@ -138,21 +142,216 @@ section {
 }
 
 /* rest list */
-.restInfo {
+.restList > .restInfo {
     width: 480px;
     border: #888 solid 1px;
 }
 
-.restImg {
+.restList > .restInfo > .restImg {
     width: 100px;
 }
 
-.restDetail {
+.restList > .restInfo > .restDetail {
     width: 380px;
+}
+
+.reviewPointAvg {
+    color: #ffa800;
+}
+
+/* rest menu */
+#restInfo {
+    width: 1000px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#restMenu, .restInfoList, .menuInfo {
+    width: 600px;
+}
+
+#restMenu > .restName, .restIntro {
+    border: #e6e6e6 solid 1px;
+}
+
+.orderTable > div {
+    width: 350px;
+    border: #e6e6e6 1px solid;
+    border-bottom: none;
+    border-top: none;
+}
+
+.orderTable> div > hr {
+    border: none;
+    border: #e6e6e6 1px solid;
+}
+
+.orderBtn {
+    background-color: #fa0050;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 0%;
+    height: 46px;
+    width: 350px;
+}
+
+.orderEmptyBtn {
+    background-color: #e6e6e6;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 0%;
+    height: 46px;
+    width: 350px;
+}
+
+#restMenu > .restInfo {
+    width: 600px;
+    height: 105px;
+    border: #e6e6e6 solid 1px;
+}
+
+.restInfoList > div {
+    border: #e6e6e6 solid 1px;
+    font-weight: bold;
+    font-size: 15px;
+    height: 40px;
+    line-height: 35px;
+}
+
+.menuInfo > div {
+    border: #e6e6e6 solid 1px;
+}
+
+.menuInfo > .menuName {
+    font-size: 18px;
+}
+
+.menuEx {
+    font-size: 12px;
+    color: #888;
+}
+
+/* review */
+.menuReview, .reviewInfo {
+    border: #e6e6e6 solid 1px;
 }
 
 .reviewPoint {
     color: #ffa800;
+    font-weight: bold;
+}
+
+.orderedMenu {
+    font-size: 12px;
+    color: #d1bca4;
+}
+
+.reviewImg {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+    height: 350px;
+}
+
+/* myInfo */
+/* payment */
+
+.payment {
+    background-color: #000;
+    color: #fff;
+}
+
+.infoBox {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.address, .phoneNumber {
+    border: #e6e6e6 solid 1px;
+    border-radius: 0%;
+}
+
+.paymentBtn {
+    background-color: #fa0050;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 0%;
+    height: 46px;
+    width: 350px;
+}
+
+.myInfoTable {
+    width: 630px;
+}
+
+.myInfoTable > .info {
+    font-size: 15px;
+}
+
+.paymentTable, .myInfoTable {
+    border: #e6e6e6 solid 1px;
+}
+
+.myInfoTable > textarea {
+    width: 600px;
+    border: #e6e6e6 solid 1px;
+}
+
+.orderHistory {
+    background-color: #e6e6e6;
+}
+
+.orderHistoryMenu {
+    background-color: #fff8eb;
+}
+
+.totalPay {
+    color: #fa0050;
+    font-weight: bold;
+    background-color: #fff8eb;
+}
+
+.paymentMethod {
+    width: 600px;
+}
+
+.paymentMethod > div {
+    width: 290px;
+    height: 50px;
+    border: #e6e6e6 solid 1px;
+    
+}
+
+/* modal */
+#menuModal > .modal-dialog > .modal-content, #moreModal > .modal-dialog > .modal-content {
+    border-radius: 0%;
+}
+
+#menuModal > .modal-dialog > .modal-content {
+    width: 382px;
+}
+
+#menuModal > .modal-dialog > .modal-content > div > .menuInfo {
+    font-size: 12px;
+    color: #888;
+}
+
+#menuModal > .modal-dialog > .modal-content > div >.border-top {
+    background-color: #fa0050;
+}
+
+.menuAddBtn {
+    color: #fff;
+    font-weight: bold;
+}
+
+.menuAddBtn:hover {
+    color: #000;
 }
 
 /* footer */

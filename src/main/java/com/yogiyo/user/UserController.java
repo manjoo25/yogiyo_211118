@@ -6,7 +6,6 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RequestMapping("/user")
 @Controller
@@ -41,14 +40,11 @@ public class UserController {
 	/**
 	 * 로그아웃
 	 * @param model
-	 * @param eamil
 	 * @return
 	 */
 	// 요청 URL : http://localhost/user/sign_out_view
 	@RequestMapping("/sign_out_view")
-	public String signOutView(Model model
-			
-			) {
+	public String signOutView(Model model) {
 		model.addAttribute("viewName", "/user/sign_out");
 		
 		return "template/layout";
@@ -62,6 +58,6 @@ public class UserController {
 		session.removeAttribute("userLoginId");
 		session.removeAttribute("userEmail");
 		session.removeAttribute("userId");
-		return "redirect:/list/rest_list";
+		return "redirect:/user/sign_out";
 	}
 }

@@ -1,30 +1,29 @@
-package com.yogiyo.rest.model;
+package com.yogiyo.menu.model;
 
 import java.util.Date;
 
-public class Store {
+public class Menu {
 
 	private int id;
+	private int storeId;
 	private String name;
-	private double reviewPoint;
-	private String address;
 	private String introduce;
-	private String category;
 	private String imagePath;
+	private int price;
 	private Date createdAt;
 	private Date updatedAt;
 	
-	public String getImagePath() {
-		return imagePath;
-	}
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
-	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getStoreId() {
+		return storeId;
+	}
+	public void setStoreId(int storeId) {
+		this.storeId = storeId;
 	}
 	public String getName() {
 		return name;
@@ -32,29 +31,23 @@ public class Store {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getReviewPoint() {
-		return reviewPoint;
-	}
-	public void setReviewPoint(double reviewPoint) {
-		this.reviewPoint = reviewPoint;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
 	public String getIntroduce() {
 		return introduce;
 	}
 	public void setIntroduce(String introduce) {
 		this.introduce = introduce;
 	}
-	public String getCategory() {
-		return category;
+	public String getImagePath() {
+		return imagePath;
 	}
-	public void setCategory(String category) {
-		this.category = category;
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	public Date getCreatedAt() {
 		return createdAt;

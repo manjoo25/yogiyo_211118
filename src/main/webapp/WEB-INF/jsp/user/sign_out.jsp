@@ -10,3 +10,14 @@
 	</div>
 	<button type="button" id="signOutBtn" class="btn w-100">로그아웃</button>
 </div>
+
+<script>
+$(document).ready(function() {
+	$('#signOutBtn').on('click', function() {
+		alert("로그아웃 하였습니다. 홈 화면으로 돌아갑니다.");
+		
+		// 홈 화면으로 경로 변경
+		location.href = "/user/sign_in_view";
+	});
+});
+</script>
