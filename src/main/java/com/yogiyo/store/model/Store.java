@@ -1,4 +1,4 @@
-package com.yogiyo.rest.model;
+package com.yogiyo.store.model;
 
 import java.util.Date;
 

@@ -1,10 +1,10 @@
-package com.yogiyo.rest.dao;
+package com.yogiyo.store.dao;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.yogiyo.rest.model.Store;
+import com.yogiyo.store.model.Store;
 
 @Repository
 public interface StoreDAO {

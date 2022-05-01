@@ -1,22 +1,19 @@
-package com.yogiyo.rest;
+package com.yogiyo.store;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.yogiyo.rest.bo.StoreBO;
-import com.yogiyo.rest.model.Store;
+import com.yogiyo.store.bo.StoreBO;
+import com.yogiyo.store.model.Store;
 
-@RequestMapping("/list")
-@Controller
-public class RestController {
-	
+public class StoreController {
+		
 	@Autowired
 	private StoreBO storeBO;
-
+	
 	/**
 	 * 음식점 리스트
 	 * @param model
@@ -31,4 +28,5 @@ public class RestController {
 		
 		return "template/layout";
 	}
+
 }
